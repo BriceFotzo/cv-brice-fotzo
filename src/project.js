@@ -11,7 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import { useTranslation } from 'react-i18next';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -50,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
 const projectsList=[
     { id:0,
       image:"/assets/SaveEnergyHouseB.jpg",
-      title:"Amélioration de la gestion des achats d’énergie",
-      content:"Prédire les consommations d’énergie des usines avec plus de précision pour  accompagner les commandes d’énergie",
+      title:"energy-title",
+      content:"energy-description",
       link:"",
       category:"RENAULT",
       categorylink:"https://group.renault.com/",
@@ -61,8 +61,8 @@ const projectsList=[
     { 
         id:1,
         image:"/assets/3.png",
-        title:"Suivi des outils d’usinage",
-        content:"Traiter les données d’usinage et créer des Dashboards permettant de visualiser leurs durées de vie afin de les changer au bon moment",
+        title:"usinage-title",
+        content:"usinage-description",
         link:"",
         category:"RENAULT",
         categorylink:"https://group.renault.com/",
@@ -71,8 +71,8 @@ const projectsList=[
       { 
         id:2,
         image:"/assets/2.png",
-        title:"Réduction des taux de défauts de fonderie",
-        content:"Identification des causes et prédiction des défauts pour la prévention de ces derniers",
+        title:"defect-title",
+        content:"defect-description",
         link:"",
         category:"RENAULT",
         categorylink:"https://group.renault.com/",
@@ -80,8 +80,8 @@ const projectsList=[
       },
       { id:3,
         image:"/assets/4.png",
-        title:"Optimisation des temps de production et d’assemblage",
-        content:"Calculer et restituer les temps de cycles de procédés via un Dashboard. Ce dernier permet d’identifier les opérations lentes/pénalisantes pour une optimisation des procédés",
+        title:"tcy-title",
+        content:"tcy-description",
         link:"",
         category:"RENAULT",
         categorylink:"https://group.renault.com/",
@@ -89,8 +89,8 @@ const projectsList=[
       },
       { id:5,
         image:"/assets/ISBN.png",
-        title:"ISBN READER",
-        content:"Prédire le numéro d'identifiant unique (ISBN) d'un livre grâce à une image de sa 4ème de couverture.",
+        title:"isbn-title",
+        content:"isbn-description",
         link:"Github",
         href:"https://github.com/BriceFotzo/ISBN-READER.git",
         category:"ESIGELEC",
@@ -113,7 +113,7 @@ const projectsList=[
 
 export default function Projets(props) {
   const classes = useStyles();
-
+  const { t } = useTranslation();
   return (
     <React.Fragment>
       <CssBaseline />
@@ -167,13 +167,14 @@ export default function Projets(props) {
                   <CardContent className={classes.cardContent}>
                   <a href={card.categorylink} class={`badge badge-${card.color}`}>{card.category}</a>
                     <Typography gutterBottom variant="h6" component="h5">
-                    {card.title}
+                    {t(card.title)}
                     </Typography>
                     <Typography>
-                    {card.content}
+                    {t(card.content)}
                     </Typography>
                   </CardContent>
                   <CardActions>
+                  
                   {card.link?
                  <a target="_blank" href={card.href}> <button  class="btn btn-primary">{card.link}</button></a>
                   // <Button href={card.href} size="small" color="primary" className="btn btn-primary">

@@ -1,0 +1,16 @@
+{
+    "translate-button": "EN",
+    "translated-text": "This is english",
+    "energy-title": "Improving management of energy purchases",
+    "energy-description": "Predict factory energy consumption more accurately to support energy orders",
+    "usinage-title": "Monitoring of machining tools",
+    "usinage-description": "Process machining data and create Dashboards in order to monitor their lifetimes so that we can change them at the right time",
+    "defect-title": "Reduction of foundry defect rates",
+    "defect-description": "Identification of causes and prediction of faults for the prevention of the latter",
+    "tcy-title": "Optimization of process times",
+    "tcy-description": "Automate the computation of processes cycle's time. I designed a dashboard in order to monitor those cycle time.",
+    "isbn-title": "ISBN READER",
+    "isbn-description": "Predict the unique id number of a book given its back cover image.",
+    "beelinked-title": "Beelinked",
+    "beelinked-description": "Design and build a web app to manage a bee breeding and monitor data(temperature, weight, hygrometry) hives in real time."
+}

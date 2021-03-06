@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ReactDOM from 'react-dom';
 import clsx from 'clsx';
@@ -29,7 +29,9 @@ import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import Filter1Icon from '@material-ui/icons/Filter1';
 import reportWebVitals from './reportWebVitals';
-
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+import Lang from "./Lang";
 import CanvasJSReact from './assets/canvasjs.react';
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -140,19 +142,42 @@ export const useStyles = makeStyles((theme) => ({
 
 
 export default function Dashboard() {
+  const { t } = useTranslation();
+  const [titleChart,setTitleChart]=useState("Nombre de projets par thème")
+  const [titleX,setTitleX]=useState("Nombre de projets")
+  const [titleY,setTitleY]=useState("Thèmes")
+function handleClick(lang) {
+  console.log('test')
+  i18next.changeLanguage(lang)
+  
+  if (lang=='fr')
+  {
+    setTitleChart("Nombre de projets par thème")
+    setTitleX("Nombre de projets")
+    setTitleY("Thèmes")
+  }
+  else{
+    setTitleChart("No of Projects per Topic")
+    setTitleX("No of Projects")
+    setTitleY("Topics")
+  }
+}
   const options = {
     animationEnabled: true,
+    responsive: true,
+    responsiveAnimationDuration:1,
+    maintainAspectRatio:true,
     theme: "dark2",
     backgroundColor: "#6f7785",
     title:{
-      text: "Nombre de projets par thème"
+      text: titleChart
     },
     axisX: {
-      title: "Nombre de projets",
+      title: titleX ,
       reversed: true,
     },
     axisY: {
-      title: "Thèmes",
+      title:titleY,
       includeZero: true,
       
     },
@@ -254,15 +279,29 @@ export default function Dashboard() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
 
-          <Grid item xs={3} md={4} lg={12}>
+          <Grid item xs={12} md={4} lg={12}>
               <Paper >
+              <Grid item xs={12} md={4} lg={12}></Grid>
               <div class="pres-card">
               <div class="pres-header"> 
+              <nav style={{ width: '100%', padding: '2rem 0', backgroundColor:'gray' }}>
+          <button onClick={()=>handleClick('en')} >
+            English
+          </button>
+          <button onClick={()=>handleClick('fr')} >
+            French
+          </button>
+           <Lang />
+        <p>{t('common.translated-text')}</p>
+        </nav>
+              <Grid item xs={12} md={4} lg={12}>
               <img class="pres-image" src="assets/img1.jpg" alt="test"></img>
-                  <p><h1 class="pres-title">Bonjour, je suis Brice FOTZO</h1>
+              <p><h1 class="pres-title">Bonjour, je suis Brice FOTZO</h1>
                   <h2 class="pres-content">Je serai ingénieur en <b>Big Data pour la Transformation Numérique</b> en Septembre 2021.</h2>
                   <h3 class="pres-content">Ce <b>tableau de bord</b> est destiné aux recruteurs. Il a pour but de <b>faciliter</b> la prise de <b>décision</b> (C'est lui que je veux / Profil intéressant mais pas por mon poste/...). Si vous êtes recruteur,et que mon profil vous intéresse. N'hésitez pas à me contacter</h3>
-                  </p> </div> 
+                  </p>
+              </Grid>
+                   </div> 
                 
                 
                 
@@ -300,7 +339,7 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             
-            <Grid item xs={3} md={4} lg={12}>
+            <Grid item xs={12} md={4} lg={12}>
               <Paper >
               <CanvasJSChart options = {options}
 				
@@ -308,7 +347,7 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             {/* Recent Deposits */}
-            <Grid item xs={3} md={4} lg={12}>
+            <Grid item xs={12} md={4} lg={12}>
               <Paper >
                 <Projets />
               </Paper>

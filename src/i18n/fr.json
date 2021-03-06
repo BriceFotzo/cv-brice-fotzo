@@ -1,0 +1,16 @@
+{
+    "translate-button": "FR",
+    "translated-text": "C'est du français",
+    "energy-title": "Amélioration de la gestion des achats d’énergie",
+    "energy-description": "Prédire les consommations d’énergie des usines avec plus de précision pour accompagner les commandes d’énergie",
+    "usinage-title": "Suivi des outils d’usinage",
+    "usinage-description": "Traiter les données d’usinage et créer des Dashboards permettant de visualiser leurs durées de vie afin de les changer au bon moment",
+    "defect-title":"Réduction des taux de défauts de fonderie",
+    "defect-description":"Identification des causes et prédiction des défauts pour la prévention de ces derniers",
+    "tcy-title": "Optimisation des temps de production et d’assemblage",
+    "tcy-description": "Calculer et restituer les temps de cycles de procédés via un Dashboard. Ce dernier permet d’identifier les opérations lentes/pénalisantes pour une optimisation des procédés",
+    "isbn-title": "ISBN READER",
+    "isbn-description": "Prédire le numéro d'identifiant unique (ISBN) d'un livre grâce à une image de sa 4ème de couverture.",
+    "beelinked-title": "Beelinked",
+    "beelinked-description": "Concevoir et développer une application web permettant de gérer son élévage d'abeilles et visualiser les données de ses ruches(poids, température, humidité) en temps réel."
+}
