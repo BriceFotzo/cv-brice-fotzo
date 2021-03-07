@@ -120,39 +120,12 @@ export default function Projets(props) {
       <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Mes projets
+            Expériences & projets
           </Typography>
         </Toolbar>
       </AppBar>
       <main>
-        {/* Hero unit */}
-        {/* <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-           
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Cliquez sur une catégorie pour n'afficher que les projets qui vous intéressent.
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Professionnels
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Personnels
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Académiques
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
-          </Container>
-        </div> */}
+
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>

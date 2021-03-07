@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import ReactDOM from 'react-dom';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -28,21 +26,15 @@ import GaugeChart from 'react-gauge-chart'
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import Filter1Icon from '@material-ui/icons/Filter1';
-import reportWebVitals from './reportWebVitals';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-import Lang from "./Lang";
 import CanvasJSReact from './assets/canvasjs.react';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-import Button from '@material-ui/core/Button';
-import {
-  IconFlagFR,
-  IconFlagUK
-} from 'material-ui-flags';
+import LanguageItem from './languageItem'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
+import ContactItem from './contactItem'
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 function Copyright() {
@@ -63,7 +55,7 @@ const drawerWidth = 240;
 export const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor:"#282e38"
+    backgroundColor: "#282e38"
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -82,13 +74,13 @@ export const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
   },
-  kpiText:{
+  kpiText: {
     width: "auto",
     height: "50px",
-  margin: "20px auto",
-    
+    margin: "20px auto",
+
   },
-  
+
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
@@ -141,9 +133,9 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
-    textAlign:"center",
-    backgroundColor:"#6f7785",
-    color:"white"
+    textAlign: "center",
+    backgroundColor: "#6f7785",
+    color: "white"
   },
   fixedHeight: {
     height: 260,
@@ -154,118 +146,89 @@ export const useStyles = makeStyles((theme) => ({
 export default function Dashboard(props) {
   const { t } = useTranslation();
   const [value, setValue] = React.useState(props.lang);
-  const [titleChart,setTitleChart]=useState("Nombre de projets par thème")
-  const [titleX,setTitleX]=useState("Nombre de projets")
-  const [titleY,setTitleY]=useState("Thèmes")
-  
+  const [titleChart, setTitleChart] = useState("Nombre de projets par thème")
+  const [titleX, setTitleX] = useState("Nombre de projets")
+  const [titleY, setTitleY] = useState("Thèmes")
+
   console.log(props.match.params.lang)
   function handleChange(event) {
     console.log('test')
     i18next.changeLanguage(event.target.value)
     setValue(event.target.value)
-    if (event.target.value=='fr')
-    {
+    if (event.target.value == 'fr') {
       setTitleChart("Nombre de projets par thème")
       setTitleX("Nombre de projets")
       setTitleY("Thèmes")
     }
-    else{
+    else {
       setTitleChart("No of Projects per Topic")
       setTitleX("No of Projects")
       setTitleY("Topics")
     }
   }
 
-function updateLang(){
-  if (props.lang=='fr')
-  {
-    setTitleChart("Nombre de projets par thème")
-    setTitleX("Nombre de projets")
-    setTitleY("Thèmes")
-  }
-  else{
-    setTitleChart("No of Projects per Topic")
-    setTitleX("No of Projects")
-    setTitleY("Topics")
-  }
-}
-function handleClick(lang) {
-  console.log('test')
-  i18next.changeLanguage(lang)
-  setValue(lang)
-  if (lang=='fr')
-  {
-    setTitleChart("Nombre de projets par thème")
-    setTitleX("Nombre de projets")
-    setTitleY("Thèmes")
-  }
-  else{
-    setTitleChart("No of Projects per Topic")
-    setTitleX("No of Projects")
-    setTitleY("Topics")
-  }
-}
+
   const options = {
     animationEnabled: true,
     responsive: true,
-    responsiveAnimationDuration:1,
-    maintainAspectRatio:true,
+    responsiveAnimationDuration: 1,
+    maintainAspectRatio: true,
     theme: "dark2",
     backgroundColor: "#6f7785",
-    title:{
+    title: {
       text: titleChart
     },
     axisX: {
-      title: titleX ,
+      title: titleX,
       reversed: true,
     },
     axisY: {
-      title:titleY,
+      title: titleY,
       includeZero: true,
-      
+
     },
     data: [{
       type: "bar",
       dataPoints: [
-        { y:  9, label: "Data Analysis" },
-        { y:  8, label: "Machine Learning" },
-        { y:  3, label: "Deep Learning" },
-        { y:  10, label: "Data processing" },
-        { y:  6, label: "Data Vizualisation" },
-        { y:  9, label: "Communication" },
-        { y:  3, label: "Paas" }
+        { y: 9, label: "Data Analysis" },
+        { y: 8, label: "Machine Learning" },
+        { y: 3, label: "Deep Learning" },
+        { y: 10, label: "Data processing" },
+        { y: 6, label: "Data Vizualisation" },
+        { y: 9, label: "Communication" },
+        { y: 3, label: "Paas" }
       ]
     }]
-      }
-  const datas=[{
-    icon:WorkIcon,
-    title:"Expérience",
-    value:"3 ans",
-    image:'/assets/renaultC.png',
-    link:"Groupe Renault",
-    style:"kpiText",
+  }
+  const datas = [{
+    icon: WorkIcon,
+    title: "Expérience",
+    value: "3 ans",
+    image: '/assets/renaultC.png',
+    link: "Groupe Renault",
+    style: "kpiText",
     url: "https://group.renault.com/",
-    btnStyle:"btnStyle",
-  },{
-    icon:SchoolIcon,
-    title:"Formation",
-    value:"5 projets",
-    image:'/assets/esigelec.png',
-    link:"ESIGELEC",
-    style:"kpiText",
-    url:"https://www.esigelec.fr/fr/big-data-pour-la-transformation-numerique-bdtn",
-    btnStyle:"btnStyle"
-  },{
-    icon:Filter1Icon,
-    title:"Prix ",
-    value:"1ère place",
-    image:'/assets/innojam.png',
-    link:"INNOJAM",
-    style:"kpiText",
-    url:"http://sites.esigelec.fr/Innojam/index.php",
-    btnStyle:"btnStyle"
+    btnStyle: "btnStyle",
+  }, {
+    icon: SchoolIcon,
+    title: "Formation",
+    value: "5 projets",
+    image: '/assets/esigelec.png',
+    link: "ESIGELEC",
+    style: "kpiText",
+    url: "https://www.esigelec.fr/fr/big-data-pour-la-transformation-numerique-bdtn",
+    btnStyle: "btnStyle"
+  }, {
+    icon: Filter1Icon,
+    title: "Prix ",
+    value: "1ère place",
+    image: '/assets/innojam.png',
+    link: "INNOJAM",
+    style: "kpiText",
+    url: "http://sites.esigelec.fr/Innojam/index.php",
+    btnStyle: "btnStyle"
   },
- ]
+  ]
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -293,11 +256,11 @@ function handleClick(lang) {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             CV Brice FOTZO
           </Typography>
-          <IconButton color="inherit">
+          {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -312,123 +275,133 @@ function handleClick(lang) {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        
-        
-      
-      <FormControl component="fieldset">
-      <FormLabel component="legend">{t('language')}</FormLabel>
-      <RadioGroup row aria-label="position" name="position" defaultValue="top">
-        
-        <FormControlLabel
-          value="start"
-          control={<Radio
-            checked={value === 'en'}
-            onChange={handleChange}
-            value="en"
-            color="default"
-            name="radio-button-demo"
-            inputProps={{ 'aria-label': 'EN' }}
-            label="English"
-          />}
-          label={<IconFlagUK/>}
-          labelPlacement="start"
-        />
-        <FormControlLabel
-          value="start"
-          control={
-            <Radio
-              checked={value === 'fr'}
-              onChange={handleChange}
-              value="fr"
-              color="default"
-              name="radio-button-demo"
-              inputProps={{ 'aria-label': 'FR' }}
-              size="small"
-              label="Français"
-            />}
-          label={<IconFlagFR/>}
-          labelPlacement="start"
-        />
-        
-      </RadioGroup>
-    </FormControl>
+        <LanguageItem handleChange={handleChange} />
         <Divider />
 
-        <List><MainListItems/></List>
-       
-       
+        <List><MainListItems /></List>
+
+
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
 
-      
-          <Grid item xs={12} md={4} lg={12}>
-              <Paper >
-              <Grid item xs={12} md={4} lg={12}></Grid>
-              <div class="pres-card">
-              <div class="pres-header"> 
-              
-              <Grid item xs={12} md={4} lg={12}>
-              <img class="pres-image" src="assets/img1.jpg" alt="test"></img>
-              <p><h1 class="pres-title">{t("bonjour")} {t("je")} {t("suis")} Brice FOTZO</h1>
+            <Grid item xs={12} sm={6}>
+              <Paper className={classes.paper}>
+                <img class="pres-image" src="assets/img1.jpg" alt="test"></img>
+                <p><h1 class="pres-title">{t("bonjour")} {t("je")} {t("suis")} Brice FOTZO</h1>
                   <h2 class="pres-content">{t("intro")} <b>{t("bd")}</b> {t("date")}.</h2>
                   <h3 class="pres-content">{t("this")} <b>{t("dash")}</b> {t("motivation2")}  </h3>
-                  </p>
-              </Grid>
-                   </div> 
-                
-                
-                
-              </div>
-               
+                </p>
               </Paper>
             </Grid>
-            
+            <Grid item xs={12} sm={6}>
+              <Paper className={classes.paper}>
+              <Grid id="contact" container spacing={1}>
+                  <h3 class='justify-content-center'>A propos de moi</h3>
+                  <Grid container item xs={12} spacing={3}>
+                    <Grid item xs={6}>
+                    <ContactItem  icon={<LinkedInIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
+                      J'ai réalisé des projets en autonomie
+                    </p></div>}/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <ContactItem icon={<GitHubIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
+                      J'ai réalisé des projets en autonomie
+                    </p></div>} />
+                    </Grid>
+                    
+                  </Grid>
+                  <Grid container item xs={12} spacing={3}>
+                  <Grid item xs={6}>
+                    <ContactItem  icon={<PhoneIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
+                      J'ai réalisé des projets en autonomie
+                    </p></div>}/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <ContactItem  icon={<MailIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
+                      J'ai réalisé des projets en autonomie
+                    </p></div>}/>
+                    </Grid>
+                  </Grid>
+
+                </Grid>
+                </Paper>
+                <br></br>
+                <Paper className={classes.paper}>
+                <Grid id="contact" container spacing={1}>
+                  <h3 class='justify-content-center'>Contactez moi!</h3>
+                  <Grid container item xs={12} spacing={3}>
+                    <Grid item xs={6}>
+                    <ContactItem  icon={<LinkedInIcon/>} link={<h6><a href="https://www.linkedin.com/in/bricefotzo/">https://www.linkedin.com/in/bricefotzo/</a></h6>}/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <ContactItem icon={<GitHubIcon/>} link={<h6><a href="https://github.com/bricefotzo">https://github.com/bricefotzo</a></h6>} />
+                    </Grid>
+                    
+                  </Grid>
+                  <Grid container item xs={12} spacing={3}>
+                  <Grid item xs={6}>
+                    <ContactItem  icon={<PhoneIcon/>} link={<h6>+33 06 60 88 46 39</h6>}/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <ContactItem  icon={<MailIcon/>} link={<h6><a href="mailto:brice.fotzo@hotmail.com">brice.fotzo@hotmail.com</a></h6>}/>
+                    </Grid>
+                  </Grid>
+
+                </Grid>
+              </Paper>
+            </Grid>
+
+
+
+
+
+
             {/* Recent Deposits */}
-            {datas.map((item,key) => 
+            {datas.map((item, key) =>
+              <Grid item xs={12} md={4} lg={3}>
+                <Paper className={fixedHeightPaper}>
+
+                  {<Deposits title={item.title} value={item.value} image={item.image} link={item.link} style={item.style} url={item.url} btnStyle={item.btnStyle} />}
+
+                </Paper>
+              </Grid>)}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                
-                {<Deposits  title={item.title} value={item.value} image={item.image} link={item.link} style={item.style} url={item.url} btnStyle={item.btnStyle} />}
-                
-              </Paper>
-            </Grid>)}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-              <Deposits title="TOEIC" value={<GaugeChart id="gauge-chart1" 
-                   nrOfLevels={990}
-  arcsLength={[0.3, 0.5, 0.2]}
-  colors={['#EA4228', '#F5CD19','#5BE12C' ]}
-  percent={0.90}
-  arcPadding={0.0}
-  animate={false}
-  needleColor="#345243"
-  arcWidth={0.2}
-  textColor="#FFFFFF"
-  cornerRadius={0}
-  formatTextValue={value => 895}
-              />} image={'/assets/ets.png'} style='imageKPI' btnStyle="linkC" />
-              
-                
+                <Deposits title="TOEIC" value={<GaugeChart id="gauge-chart1"
+                  nrOfLevels={990}
+                  arcsLength={[0.3, 0.5, 0.2]}
+                  colors={['#EA4228', '#F5CD19', '#5BE12C']}
+                  percent={0.90}
+                  arcPadding={0.0}
+                  animate={false}
+                  needleColor="#345243"
+                  arcWidth={0.2}
+                  textColor="#FFFFFF"
+                  cornerRadius={0}
+                  formatTextValue={value => 895}
+                />} image={'/assets/ets.png'} style='imageKPI' btnStyle="linkC" />
+
+
               </Paper>
             </Grid>
-            
-            <Grid item xs={12} md={4} lg={12}>
+
+            <Grid id="skills" item xs={12} md={4} lg={12}>
               <Paper >
-              <CanvasJSChart options = {options}
-				
-			/>
+                <CanvasJSChart options={options}
+
+                />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={12}>
+            <Grid id="experience" item xs={12} md={4} lg={12}>
               <Paper >
                 <Projets />
               </Paper>
             </Grid>
-            
+
           </Grid>
           <Box pt={4}>
             <Copyright />

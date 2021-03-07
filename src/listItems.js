@@ -11,6 +11,10 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import SettingsApplicationsRoundedIcon from '@material-ui/icons/SettingsApplicationsRounded';
+import WorkRoundedIcon from '@material-ui/icons/WorkRounded';
+import ContactMailRoundedIcon from '@material-ui/icons/ContactMailRounded';
+
 
 
 export default function MainListItems() {
@@ -20,28 +24,28 @@ export default function MainListItems() {
     <div>
       <ListItem button>
         <ListItemIcon>
-          <DashboardIcon />
+          <SettingsApplicationsRoundedIcon />
         </ListItemIcon>
-        <ListItemText primary={t("dashboard-item")} />
+        <a href="#skills"><ListItemText primary={t("skill-item")} /></a>
       </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <WorkRoundedIcon />
         </ListItemIcon>
-        <ListItemText primary={t("exp-item")}  />
+        <a href="#experience"><ListItemText primary={t("exp-item")}  /></a>
       </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <PeopleIcon />
+          <ContactMailRoundedIcon />
         </ListItemIcon>
-        <ListItemText primary={t("project-item")} />
+        <a href="#contact"><ListItemText primary={t("contact")} /></a>
       </ListItem>
-      <ListItem button>
+      {/* <ListItem button>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
-        <ListItemText primary={t("skill-item")} />
-      </ListItem>
+        <ListItemText primary= />
+      </ListItem> */}
       <ListItem button>
         <ListItemIcon>
           <LayersIcon />

@@ -118,3 +118,15 @@ h3.pres-content{
   padding:0;
 
 }
+.pres-image {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin: 20 50px;
+  margin: 0 auto;
+}
+
+.pres-title, .pres-content {
+  margin: 0;
+  font-weight: normal;
+}
