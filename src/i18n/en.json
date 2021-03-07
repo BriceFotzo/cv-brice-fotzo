@@ -12,5 +12,23 @@
     "isbn-title": "ISBN READER",
     "isbn-description": "Predict the unique id number of a book given its back cover image.",
     "beelinked-title": "Beelinked",
-    "beelinked-description": "Design and build a web app to manage a bee breeding and monitor data(temperature, weight, hygrometry) hives in real time."
+    "beelinked-description": "Design and build a web app to manage a bee breeding and monitor data(temperature, weight, hygrometry) hives in real time.",
+    "dashboard-item":"Dashboard",
+    "project-item":"Projects",
+    "exp-item":"Experience",
+    "skill-item":"Skills",
+    "language":"Language",
+    "bonjour":"Hello",
+     "je" : "I",
+     "suis":"am",
+     "transfo":"digitalization",
+     "intro":"I'll become a",
+     "bd" :"Big Data For Digitalization",
+     "date": "September 2021",
+     "motivation":"I designed this",
+     "dash": "Dashboard", 
+     "motivation2":"for recruters.",
+     "let":"Please let me know if you're interested by my profile."
+
+
 }
