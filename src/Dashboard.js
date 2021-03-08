@@ -35,6 +35,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
 import ContactItem from './contactItem'
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import SearchIcon from '@material-ui/icons/Search';
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import GroupIcon from '@material-ui/icons/Group';
+import AdjustSharpIcon from '@material-ui/icons/AdjustSharp';
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 function Copyright() {
@@ -299,67 +304,40 @@ export default function Dashboard(props) {
             <Grid item xs={12} sm={6}>
               <Paper className={classes.paper}>
               <Grid id="contact" container spacing={1}>
-                  <h3 class='justify-content-center'>A propos de moi</h3>
+                  <h2><b>A propos de moi</b></h2>
                   <Grid container item xs={12} spacing={3}>
-                    <Grid item xs={6}>
-                    <ContactItem  icon={<LinkedInIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
-                      J'ai réalisé des projets en autonomie
+                    <Grid item xs={12} lg={6}>
+                    <ContactItem  icon={<SearchIcon/>} link={<div><h4>Parce que je suis <b>curieux</b>,</h4><p>
+                      j'apprends régulièrement et je fais de la veille technologique grâce à des medias tels que Medium
                     </p></div>}/>
                     </Grid>
-                    <Grid item xs={6}>
-                    <ContactItem icon={<GitHubIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
-                      J'ai réalisé des projets en autonomie
+                    <Grid item xs={12} lg={6}>
+                    <ContactItem icon={<AutorenewIcon/>} link={<div><h4>Parce que je suis <b>autonome</b>,</h4><p>
+                      je m'intéresse aux problèmes qui peuvent être résolu en l'utilisant 
                     </p></div>} />
                     </Grid>
                     
                   </Grid>
+                  <br></br>
+                  <br></br>
                   <Grid container item xs={12} spacing={3}>
-                  <Grid item xs={6}>
-                    <ContactItem  icon={<PhoneIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
-                      J'ai réalisé des projets en autonomie
+                  <Grid item xs={12} lg={6}>
+                    <ContactItem  icon={<GroupIcon/>} link={<div><h4>Parce que j'aime le <b>travail d'équipe</b>,</h4><p>
+                      à l'ESIGELEC j'ai été membre du bureau des étudiants , de l'équipe d'organisation du GALA et celle de tennis au <a href="https://cs-sports.fr/toss/">TOSS</a>.
                     </p></div>}/>
                     </Grid>
-                    <Grid item xs={6}>
-                    <ContactItem  icon={<MailIcon/>} link={<div><h6>Parce que j'aime apprendre,</h6><p>
-                      J'ai réalisé des projets en autonomie
+                    <Grid item xs={12} lg={6}>
+                    <ContactItem  icon={<AdjustSharpIcon/>} link={<div><h4>Parce que j'aime les <b>challenges</b>,</h4><p>
+                      j'ai participé aux hackatons <a href="http://sites.esigelec.fr/Innojam/index.php">INNOJAM</a>, <a href="https://battledev.blogdumoderateur.com/">BattleDev 2019</a> et des tournoi de tennis...
                     </p></div>}/>
                     </Grid>
                   </Grid>
 
                 </Grid>
                 </Paper>
-                <br></br>
-                <Paper className={classes.paper}>
-                <Grid id="contact" container spacing={1}>
-                  <h3 class='justify-content-center'>Contactez moi!</h3>
-                  <Grid container item xs={12} spacing={3}>
-                    <Grid item xs={6}>
-                    <ContactItem  icon={<LinkedInIcon/>} link={<h6><a href="https://www.linkedin.com/in/bricefotzo/">https://www.linkedin.com/in/bricefotzo/</a></h6>}/>
-                    </Grid>
-                    <Grid item xs={6}>
-                    <ContactItem icon={<GitHubIcon/>} link={<h6><a href="https://github.com/bricefotzo">https://github.com/bricefotzo</a></h6>} />
-                    </Grid>
-                    
-                  </Grid>
-                  <Grid container item xs={12} spacing={3}>
-                  <Grid item xs={6}>
-                    <ContactItem  icon={<PhoneIcon/>} link={<h6>+33 06 60 88 46 39</h6>}/>
-                    </Grid>
-                    <Grid item xs={6}>
-                    <ContactItem  icon={<MailIcon/>} link={<h6><a href="mailto:brice.fotzo@hotmail.com">brice.fotzo@hotmail.com</a></h6>}/>
-                    </Grid>
-                  </Grid>
-
-                </Grid>
-              </Paper>
+            
             </Grid>
 
-
-
-
-
-
-            {/* Recent Deposits */}
             {datas.map((item, key) =>
               <Grid item xs={12} md={4} lg={3}>
                 <Paper className={fixedHeightPaper}>
@@ -384,7 +362,6 @@ export default function Dashboard(props) {
                   formatTextValue={value => 895}
                 />} image={'/assets/ets.png'} style='imageKPI' btnStyle="linkC" />
 
-
               </Paper>
             </Grid>
 
@@ -395,7 +372,6 @@ export default function Dashboard(props) {
                 />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
             <Grid id="experience" item xs={12} md={4} lg={12}>
               <Paper >
                 <Projets />
@@ -403,8 +379,27 @@ export default function Dashboard(props) {
             </Grid>
 
           </Grid>
-          <Box pt={4}>
-            <Copyright />
+          <Box id="contact" pt={4}>
+          <Paper className={classes.paper}>
+            <h3><b>{t('info')}</b></h3>
+          <Grid container item xs={12} spacing={3}>
+                    <Grid item xs={6}>
+                    <ContactItem  icon={<LinkedInIcon/>} link={<h6><a href="https://www.linkedin.com/in/bricefotzo/">https://www.linkedin.com/in/bricefotzo/</a></h6>}/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <ContactItem icon={<GitHubIcon/>} link={<h6><a href="https://github.com/bricefotzo">https://github.com/bricefotzo</a></h6>} />
+                    </Grid>
+                    
+                  </Grid>
+                  <Grid container item xs={12} spacing={3}>
+                  <Grid item xs={6}>
+                    <ContactItem  icon={<PhoneIcon/>} link={<h6>+33 06 60 88 46 39</h6>}/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <ContactItem  icon={<MailIcon/>} link={<h6><a href="mailto:brice.fotzo@hotmail.com">brice.fotzo@hotmail.com</a></h6>}/>
+                    </Grid>
+                  </Grid>
+                  </Paper>
           </Box>
         </Container>
       </main>
