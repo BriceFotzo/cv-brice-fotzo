@@ -196,10 +196,10 @@ export default function Dashboard(props) {
       type: "bar",
       dataPoints: [
         { y: 9, label: "Data Analysis" },
-        { y: 8, label: "Machine Learning" },
-        { y: 3, label: "Deep Learning" },
-        { y: 10, label: "Data processing" },
-        { y: 6, label: "Data Vizualisation" },
+        { y: 6, label: "Machine Learning" },
+        { y: 1, label: "Deep Learning" },
+        { y: 9,label: "Data processing" },
+        { y: 7, label: "Data Vizualisation" },
         { y: 9, label: "Communication" },
         { y: 3, label: "Paas" }
       ]
