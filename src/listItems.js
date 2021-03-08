@@ -46,12 +46,12 @@ export default function MainListItems() {
         </ListItemIcon>
         <ListItemText primary= />
       </ListItem> */}
-      <ListItem button>
+      {/* <ListItem button>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
         <ListItemText primary="Integrations" />
-      </ListItem>
+      </ListItem> */}
     </div>
   )
 } 
