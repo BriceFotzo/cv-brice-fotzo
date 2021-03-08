@@ -207,8 +207,8 @@ export default function Dashboard(props) {
   }
   const datas = [{
     icon: WorkIcon,
-    title: "Expérience",
-    value: "3 ans",
+    title: "exp-kpi",
+    value: "exp-value",
     image: '/assets/renaultC.png',
     link: "Groupe Renault",
     style: "kpiText",
@@ -216,8 +216,8 @@ export default function Dashboard(props) {
     btnStyle: "btnStyle",
   }, {
     icon: SchoolIcon,
-    title: "Formation",
-    value: "5 projets",
+    title: "train-kpi",
+    value: "train-value",
     image: '/assets/esigelec.png',
     link: "ESIGELEC",
     style: "kpiText",
@@ -225,8 +225,8 @@ export default function Dashboard(props) {
     btnStyle: "btnStyle"
   }, {
     icon: Filter1Icon,
-    title: "Prix ",
-    value: "1ère place",
+    title: "prize-kpi",
+    value: "prize-value",
     image: '/assets/innojam.png',
     link: "INNOJAM",
     style: "kpiText",
@@ -261,11 +261,6 @@ export default function Dashboard(props) {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             CV Brice FOTZO
           </Typography>
-          {/* <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton> */}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -297,23 +292,23 @@ export default function Dashboard(props) {
                 <img class="pres-image" src="assets/img1.jpg" alt="test"></img>
                 <p><h1 class="pres-title">{t("bonjour")} {t("je")} {t("suis")} Brice FOTZO</h1>
                   <h2 class="pres-content">{t("intro")} <b>{t("bd")}</b> {t("date")}.</h2>
-                  <h3 class="pres-content">{t("this")} <b>{t("dash")}</b> {t("motivation2")}  </h3>
+                  <h3 class="pres-content">{t("motivation")} {t("this")} <b>{t("dash")}</b> {t("motivation2")}  </h3>
                 </p>
               </Paper>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Paper className={classes.paper}>
-              <Grid id="contact" container spacing={1}>
-                  <h2><b>A propos de moi</b></h2>
+              <Grid container spacing={1}>
+                  <h2><b>{t('about')}</b></h2>
                   <Grid container item xs={12} spacing={3}>
                     <Grid item xs={12} lg={6}>
-                    <ContactItem  icon={<SearchIcon/>} link={<div><h4>Parce que je suis <b>curieux</b>,</h4><p>
-                      j'apprends régulièrement et je fais de la veille technologique grâce à des medias tels que Medium
+                    <ContactItem  icon={<div class="dot"><SearchIcon/></div>} link={<div><h4>{t("becauseiam")} <b>{t("curious")}</b>,</h4><p>
+                      {t('curious-text')}
                     </p></div>}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                    <ContactItem icon={<AutorenewIcon/>} link={<div><h4>Parce que je suis <b>autonome</b>,</h4><p>
-                      je m'intéresse aux problèmes qui peuvent être résolu en l'utilisant 
+                    <ContactItem icon={<div class="dot"><AutorenewIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("ml")}</b>,</h4><p>
+                      {t('auto-text')}
                     </p></div>} />
                     </Grid>
                     
@@ -322,13 +317,13 @@ export default function Dashboard(props) {
                   <br></br>
                   <Grid container item xs={12} spacing={3}>
                   <Grid item xs={12} lg={6}>
-                    <ContactItem  icon={<GroupIcon/>} link={<div><h4>Parce que j'aime le <b>travail d'équipe</b>,</h4><p>
-                      à l'ESIGELEC j'ai été membre du bureau des étudiants , de l'équipe d'organisation du GALA et celle de tennis au <a href="https://cs-sports.fr/toss/">TOSS</a>.
+                    <ContactItem  icon={<div class="dot"><GroupIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("work in group")}</b>,</h4><p>
+                      {t("group-text")}<a href="https://cs-sports.fr/toss/">TOSS</a>.
                     </p></div>}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                    <ContactItem  icon={<AdjustSharpIcon/>} link={<div><h4>Parce que j'aime les <b>challenges</b>,</h4><p>
-                      j'ai participé aux hackatons <a href="http://sites.esigelec.fr/Innojam/index.php">INNOJAM</a>, <a href="https://battledev.blogdumoderateur.com/">BattleDev 2019</a> et des tournoi de tennis...
+                    <ContactItem  icon={<div class="dot"><AdjustSharpIcon/></div>} link={<div><h4>{t("becauseilike")} {t("theplu")} <b>challenges</b>,</h4><p>
+                      {t("participate in")} <a href="http://sites.esigelec.fr/Innojam/index.php">INNOJAM</a>, <a href="https://battledev.blogdumoderateur.com/">BattleDev 2019</a> {t("tennis")}
                     </p></div>}/>
                     </Grid>
                   </Grid>
@@ -348,7 +343,7 @@ export default function Dashboard(props) {
               </Grid>)}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits title="TOEIC" value={<GaugeChart id="gauge-chart1"
+                <Deposits toeic={true} title="TOEIC" value={<GaugeChart id="gauge-chart1"
                   nrOfLevels={990}
                   arcsLength={[0.3, 0.5, 0.2]}
                   colors={['#EA4228', '#F5CD19', '#5BE12C']}
@@ -366,11 +361,11 @@ export default function Dashboard(props) {
             </Grid>
 
             <Grid id="skills" item xs={12} md={4} lg={12}>
-              <Paper >
+            
                 <CanvasJSChart options={options}
 
                 />
-              </Paper>
+              
             </Grid>
             <Grid id="experience" item xs={12} md={4} lg={12}>
               <Paper >
@@ -379,8 +374,8 @@ export default function Dashboard(props) {
             </Grid>
 
           </Grid>
-          <Box id="contact" pt={4}>
-          <Paper className={classes.paper}>
+          <Box  pt={4}>
+          <Paper id="contact" className={classes.paper}>
             <h3><b>{t('info')}</b></h3>
           <Grid container item xs={12} spacing={3}>
                     <Grid item xs={6}>

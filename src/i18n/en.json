@@ -30,7 +30,27 @@
      "dash": "Dashboard", 
      "motivation2":"for recruters.",
      "let":"Please let me know if you're interested by my profile.",
-     "info":"Useful information"
+     "info":"Useful information",
+     "becauseiam":"Because I am",
+     "becauseilike":"Because I like",
+     "curious":"curious",
+     "curious-text":"I learn regularly and do technology watch thanks to media such as Medium",
+     "auto":"autonomous",
+     "auto-text":"I am interested in problems that can be solved by using it",
+     "thesing":"the",
+     "theplu":"the",
+     "work in group":"working in teams",
+     "group-text":"At ESIGELEC I was part of the student council, the organizing team of the GALA and the tennis team at the",
+     "participate in": "I participated in the hackatons",
+     "tennis":"and tennis tournaments",
+     "about":"About me",
+     "exp-kpi":"Experience",
+     "exp-value":"3 years",
+     "train-kpi":"Training",
+     "train-value":"5 projects",
+     "prize-kpi":"Awards",
+     "prize-value":"#1",
+     "ml":"machine learning"
 
 
 }

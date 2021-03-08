@@ -3,7 +3,7 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
-
+import { useTranslation } from 'react-i18next';
 function preventDefault(event) {
   event.preventDefault();
   
@@ -20,11 +20,16 @@ const useStyles = makeStyles({
 
 export default function Deposits(props) {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <React.Fragment>
-      <Title class="kpiTitle">{props.title}</Title>
+      <Title class="kpiTitle">{t(props.title)}</Title>
       <Typography class="kpiValue" component="p" variant="h4">
-      {props.value}
+        {props.toeic?
+        props.value:
+        t(props.value)
+        }
+      
       </Typography>
       
       
