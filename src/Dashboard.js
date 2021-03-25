@@ -318,7 +318,7 @@ export default function Dashboard(props) {
                   <Grid container item xs={12} spacing={3}>
                   <Grid item xs={12} lg={6}>
                     <ContactItem  icon={<div class="dot"><GroupIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("work in group")}</b>,</h4><p>
-                      {t("group-text")}<a href="https://cs-sports.fr/toss/">TOSS</a>.
+                      {t("group-text")}<a href="https://cs-sports.fr/toss/">TOSS</a> 2019.
                     </p></div>}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>

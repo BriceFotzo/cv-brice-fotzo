@@ -140,3 +140,7 @@ h3.pres-content{
   padding: 5%;
   margin:0
 }
+h6 a,p a{
+  color: #ffc000;
+  font-weight: bolder;
+}

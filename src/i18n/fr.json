@@ -25,11 +25,11 @@
      "suis":"suis",
      "transfo":"Transformation Numérique",
      "intro":"Je serai ingénieur en",
-     "bd" :"Big Data For Digitalization Engineer",
+     "bd" :"Big Data pour la Transformation Numérique",
      "date": "en Septembre 2021",
      "motivation":"J'ai réalisé ce",
      "dash": "tableau de bord", 
-     "motivation2":"pour les recruteurs.",
+     "motivation2":"pour regrouper mon travail et mes projets personnels afin de les partager avec toute personne qui serait intéressée.",
      "let":"Faites moi savoir si mon profil vous intéresse.",
      "this":"ce",
      "info":"Informations pratiques",
@@ -38,7 +38,7 @@
      "curious":"curieux",
      "curious-text":"j'apprends régulièrement et je fais de la veille technologique grâce à des médias tels que Medium",
      "auto":"autonome",
-     "auto-text":"je m'intéresse aux problèmes qui peuvent être résolu en l'utilisant",
+     "auto-text":"je m'intéresse aux problèmes qui peuvent être résolu en utilisant les méthodes de Machine Learning",
      "thesing":"le",
      "theplu":"les",
      "work in group":"travailler en équipe",
@@ -52,5 +52,5 @@
      "train-value":"5 projets",
      "prize-kpi":"Prix",
      "prize-value":"1ère place",
-     "ml":"machine learning"
+     "ml":"la résolution de problèmes"
 }
