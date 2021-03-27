@@ -40,6 +40,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import GroupIcon from '@material-ui/icons/Group';
 import AdjustSharpIcon from '@material-ui/icons/AdjustSharp';
+import WordCloud from './wordcloud'
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 function Copyright() {
@@ -359,7 +360,13 @@ export default function Dashboard(props) {
 
               </Paper>
             </Grid>
+            <Grid id="wordcloud" item xs={12} md={4} lg={12}>
+            
+            <WordCloud
 
+            />
+          
+        </Grid>
             <Grid id="skills" item xs={12} md={4} lg={12}>
             
                 <CanvasJSChart options={options}
