@@ -8,7 +8,7 @@
     "defect-title":"Réduction des taux de défauts de fonderie",
     "defect-description":"Identification des causes et prédiction des défauts pour la prévention de ces derniers",
     "tcy-title": "Optimisation des temps de production et d’assemblage",
-    "tcy-description": "Calculer et restituer les temps de cycles de procédés via un Dashboard. Ce dernier permet d’identifier les opérations lentes/pénalisantes pour une optimisation des procédés",
+    "tcy-description": "Calculer et restituer les temps de cycles des opérations pour identifier les plus pénalisantes afin d'optimiser la production.",
     "isbn-title": "ISBN READER",
     "isbn-description": "Prédire le numéro d'identifiant unique (ISBN) d'un livre grâce à une image de sa 4ème de couverture.",
     "beelinked-title": "Beelinked",
@@ -49,8 +49,15 @@
      "exp-kpi":"Expérience",
      "exp-value":"3 ans",
      "train-kpi":"Formation",
-     "train-value":"5 projets",
+     "train-value":"8 projets",
      "prize-kpi":"Prix",
      "prize-value":"1ère place",
-     "ml":"la résolution de problèmes"
+     "ml":"la résolution de problèmes",
+     "beelinked-content":"Concevoir et développer une application web permettant de gérer son élévage d'abeilles et visualiser les données de ses ruches(poids, température, humidité) en temps réel.",
+     "cv-job-description":"Proposer les offres d'emplois les plus pertinentes selon un CV.",
+     "git-description":"Automatiser des actions Git à l'aide de Python et GitHub API.",
+     "git-delete-description":"Rédiger un tutoriel sur comment supprimer un repository Github en utilisant le langage python et l'API de Github",
+     "git-delete-title":"Tutoriel Git Delete",
+     "git-title":"Automatisations Git",
+     "projectHeader":"Une liste de mes projets en cours ou terminés dans le cadre de ma formation en alternance depuis Octobre 2018. Mon école est l'ESIGELEC et mon entreprise, le groupe RENAULT. Je travaille aussi sur des projets personnels en data science."
 }

@@ -144,3 +144,25 @@ h6 a,p a{
   color: #ffc000;
   font-weight: bolder;
 }
+.date{
+  font-size: small !important;
+  font-weight: 700 !important;
+}
+.contentCard{
+  font-weight: 100 !important;
+  color: #6f7785;
+}
+.titleProject{
+  font-weight: 500 !important;
+}
+.github{
+  background-color: #2B3137 !important;
+  color: white !important;
+}
+.medium{
+  background-color: black !important;
+  color:white !important
+}
+.beelinked{
+  background-color: #ffc000 !important;
+}

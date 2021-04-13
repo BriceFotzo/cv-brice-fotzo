@@ -100,6 +100,10 @@ export default [
       value: 80,
     },
     {
+      text: 'OCR',
+      value: 50,
+    },
+    {
       text: 'Spotfire',
       value: 80,
     },
@@ -117,7 +121,7 @@ export default [
     },
     {
       text: 'ScikitLearn',
-      value: 70,
+      value: 80,
     },
     {
       text: 'MLlib',
@@ -129,7 +133,7 @@ export default [
     },
     {
       text: 'Google AI',
-      value: 10,
+      value: 20,
     },
     {
       text: 'Heroku',
@@ -137,7 +141,7 @@ export default [
     }, 
     {
       text: 'AWS',
-      value: 10,
+      value: 30,
     },
     {
       text: 'OpenCV',
@@ -145,7 +149,7 @@ export default [
     },
     {
       text: 'SQL',
-      value: 90,
+      value: 100,
     },
     {
       text: 'HiveQl',
@@ -153,11 +157,11 @@ export default [
     },
     {
       text: 'PHP',
-      value: 70,
+      value: 60,
     },
     {
       text: 'ReactJS',
-      value: 60,
+      value: 40,
     },
     {
       text: 'Gitlab',
@@ -169,11 +173,11 @@ export default [
     }, 
     {
       text: 'Windows',
-      value: 100,
+      value: 60,
     }, 
     {
       text: 'Linux',
-      value: 80,
+      value: 50,
     }, 
     {
       text: 'PL/SQL',

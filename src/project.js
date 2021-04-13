@@ -29,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
+  cardHeader: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(0),
+    textAlign:"center"
+  },
   card: {
     height: '100%',
     display: 'flex',
@@ -46,9 +51,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+function sortObjectByKeys(o) {
+  return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
+}
 const projectsList=[
-    { id:0,
+    { id:8,
+      date:"Oct. 2018 - Avr. 2020",
       image:"/assets/SaveEnergyHouseB.jpg",
       title:"energy-title",
       content:"energy-description",
@@ -59,7 +67,8 @@ const projectsList=[
 
     },
     { 
-        id:1,
+        id:5,
+        date:"Jui. 2020 - En cours",
         image:"/assets/3.png",
         title:"usinage-title",
         content:"usinage-description",
@@ -69,7 +78,8 @@ const projectsList=[
         color:"warning"
       },
       { 
-        id:2,
+        id:4,
+        date:"Jui. 2020 - Oct. 2020",
         image:"/assets/2.png",
         title:"defect-title",
         content:"defect-description",
@@ -78,7 +88,8 @@ const projectsList=[
         categorylink:"https://group.renault.com/",
         color:"warning"
       },
-      { id:3,
+      { id:6,
+        date:"Juin. 2020 - En cours",
         image:"/assets/4.png",
         title:"tcy-title",
         content:"tcy-description",
@@ -87,7 +98,8 @@ const projectsList=[
         categorylink:"https://group.renault.com/",
         color:"warning"
       },
-      { id:5,
+      { id:7,
+        date:"Mar. 2020 - Avr. 2020",
         image:"/assets/ISBN.png",
         title:"isbn-title",
         content:"isbn-description",
@@ -95,18 +107,60 @@ const projectsList=[
         href:"https://github.com/BriceFotzo/ISBN-READER.git",
         category:"ESIGELEC",
         categorylink:"https://esigelec.fr/",
-        color:"danger"
+        color:"danger",
+        btnColor:"github"
   
       },
-      { id:6,
+      { id:3,
+        date:"Oct. 2020 - En cours",
         image:"/assets/beelinked.png",
         title:"Beelinked",
-        content:"Concevoir et développer une application web permettant de gérer son élévage d'abeilles et visualiser les données de ses ruches(poids, température, humidité) en temps réel.",
+        content:"beelinked-content",
         link:"Beelinked",
         href:"https://beelinked.eu",
         category:"ESIGELEC",
         categorylink:"https://esigelec.fr/",
-        color:"danger"
+        color:"danger",
+        btnColor:"beelinked"
+        
+  
+      },{ id:2,
+        date:"Mar. 2021 - En cours",
+        image:"/assets/cv_job.png",
+        title:"CV & Job Matching",
+        content:"cv-job-description",
+        link:"Github",
+        href:"https://github.com/BriceFotzo/cv-jobs-matching",
+        category:"PERSONNEL",
+        categorylink:"",
+        color:"success",
+        btnColor:"github"
+  
+      },
+      { id:0,
+        date:"Avr. 2021 - En cours",
+        image:"/assets/Git Automation.png",
+        title:"git-title",
+        content:"git-description",
+        link:"Github",
+        href:"https://github.com/BriceFotzo/github_automation",
+        category:"PERSONNEL",
+        categorylink:"",
+        color:"success",
+        btnColor:"github"
+  
+      },
+      { id:1,
+        date:"4 Avr. 2021",
+        image:"/assets/git_del.png",
+        title:"git-delete-title",
+        content:"git-delete-description",
+        link:"Medium",
+        href:"https://bricefotzo.medium.com/how-to-delete-many-git-repositories-at-once-fe4e9ed61751",
+        category:"PERSONNEL",
+        categorylink:"",
+        color:"success",
+        btnColor:"medium"
   
       }
 ]
@@ -125,11 +179,15 @@ export default function Projets(props) {
         </Toolbar>
       </AppBar>
       <main>
+      <Container className={classes.cardHeader} maxWidth="md">
+      <h4>{t('projectHeader')}</h4>
+      </Container>
 
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
+          
           <Grid container spacing={4}>
-            {projectsList.map((card) => (
+            {projectsList.sort(function(a,b){ return a.id-b.id}).map((card) => (
               <Grid item key={card.id} xs={12} sm={6} md={4}>
                 <Card className={classes.card.id}>
                   <CardMedia
@@ -138,18 +196,20 @@ export default function Projets(props) {
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
+                  <span className="date" >{t(card.date)} </span><br></br>
                   <a href={card.categorylink} class={`badge badge-${card.color}`}>{card.category}</a>
-                    <Typography gutterBottom variant="h6" component="h5">
+                  
+                    <Typography className="titleProject" gutterBottom variant="h6" component="h5">
                     {t(card.title)}
                     </Typography>
-                    <Typography>
+                    <Typography className="contentCard">
                     {t(card.content)}
                     </Typography>
                   </CardContent>
                   <CardActions>
                   
                   {card.link?
-                 <a target="_blank" href={card.href}> <button  class="btn btn-primary">{card.link}</button></a>
+                 <a target="_blank" href={card.href}> <button  class={"btn "+card.btnColor}>{card.link}</button></a>
                   // <Button href={card.href} size="small" color="primary" className="btn btn-primary">
                   
                   // </Button>

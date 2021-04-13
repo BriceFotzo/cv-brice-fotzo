@@ -199,7 +199,7 @@ export default function Dashboard(props) {
         { y: 9, label: "Data Analysis" },
         { y: 6, label: "Machine Learning" },
         { y: 1, label: "Deep Learning" },
-        { y: 9,label: "Data processing" },
+        { y: 9, label: "Data processing" },
         { y: 7, label: "Data Vizualisation" },
         { y: 9, label: "Communication" },
         { y: 3, label: "Paas" }
@@ -360,26 +360,26 @@ export default function Dashboard(props) {
 
               </Paper>
             </Grid>
-            <Grid id="wordcloud" item xs={12} md={4} lg={12}>
             
-            <WordCloud
+            
+            <Grid id="experience" item xs={12} md={4} lg={12}>
+              <Paper >
+                
+                <Projets />
+              </Paper>
+            </Grid>
+            <Grid id="skills" item xs={12} md={4} lg={12}>
+            
+            <CanvasJSChart options={options}
 
             />
           
         </Grid>
-            <Grid id="skills" item xs={12} md={4} lg={12}>
-            
-                <CanvasJSChart options={options}
-
-                />
-              
-            </Grid>
-            <Grid id="experience" item xs={12} md={4} lg={12}>
-              <Paper >
-                <Projets />
-              </Paper>
-            </Grid>
-
+        <Grid id="wordcloud" item xs={12} md={4} lg={12}>
+        
+        <WordCloud/>
+      
+    </Grid>
           </Grid>
           <Box  pt={4}>
           <Paper id="contact" className={classes.paper}>

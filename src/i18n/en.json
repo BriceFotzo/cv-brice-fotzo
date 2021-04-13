@@ -47,10 +47,15 @@
      "exp-kpi":"Experience",
      "exp-value":"3 years",
      "train-kpi":"Training",
-     "train-value":"5 projects",
+     "train-value":"8 projects",
      "prize-kpi":"Awards",
      "prize-value":"#1",
-     "ml":"problems solving"
-
-
+     "ml":"problems solving",
+     "beelinked-content":"Design and develop a web-based application to manage bee breeding and visualize hive data (weight, temperature, humidity) in real time.",
+     "cv-job-description":"Show the most matching job offers given a resume.",
+     "git-description":"Automate Git actions using Python and GitHub API.",
+     "git-delete-description":"Write a tutorial about how to delete a Githun repository using python and the Github API.",
+     "git-delete-title":"Git Delete Tutorial",
+     "git-title":"Git Automation",
+     "projectHeader":"A list of my on going or done project in the context of my apprenticeship. My school is ESIGELEC and my company is group RENAULT. I always work on data science personnal projects."
 }
