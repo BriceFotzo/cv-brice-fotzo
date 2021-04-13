@@ -57,7 +57,7 @@ export default [
     },
     {
       text: 'Power BI',
-      value: 40,
+      value: 60,
     },
     {
       text: 'Mongo DB',
@@ -109,7 +109,7 @@ export default [
     },
     {
       text: 'Google Cloud',
-      value: 60,
+      value: 40,
     },
     {
       text: 'Pyspark',
@@ -122,6 +122,10 @@ export default [
     {
       text: 'ScikitLearn',
       value: 80,
+    },
+    {
+      text: 'Big Query',
+      value: 90,
     },
     {
       text: 'MLlib',
@@ -145,7 +149,7 @@ export default [
     },
     {
       text: 'OpenCV',
-      value: 30,
+      value: 40,
     },
     {
       text: 'SQL',
@@ -157,7 +161,7 @@ export default [
     },
     {
       text: 'PHP',
-      value: 60,
+      value: 30,
     },
     {
       text: 'ReactJS',
@@ -165,23 +169,23 @@ export default [
     },
     {
       text: 'Gitlab',
-      value: 50,
+      value: 20,
     }, 
     {
       text: 'GitHub',
-      value: 60,
+      value: 20,
     }, 
     {
       text: 'Windows',
-      value: 60,
+      value: 30,
     }, 
     {
       text: 'Linux',
-      value: 50,
+      value: 30,
     }, 
     {
       text: 'PL/SQL',
-      value: 55,
+      value: 40,
     },   
    
   ];
