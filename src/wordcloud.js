@@ -69,7 +69,7 @@ export default function WordCloud() {
         enableTooltip: true,
         deterministic: true,
         fontFamily: "impact",
-        fontSizes: [15, 80],
+        fontSizes: [10, 100],
         fontStyle: "normal",
         fontWeight: "normal",
         padding: 0,
