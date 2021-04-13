@@ -21,27 +21,27 @@ export default [
     },
     {
       text: 'Analytics',
-      value: 75,
+      value: 80,
     },
     {
       text: 'Prediction',
-      value: 50,
-    },
-    {
-      text: 'Machine learning',
-      value: 77,
-    },
-    {
-      text: 'Python',
-      value: 90,
-    },
-    {
-      text: 'Java',
       value: 40,
     },
     {
+      text: 'Machine learning',
+      value: 90,
+    },
+    {
+      text: 'Python',
+      value: 100,
+    },
+    {
+      text: 'Java',
+      value: 50,
+    },
+    {
       text: 'JavaScript',
-      value: 70,
+      value: 60,
     },
     {
       text: 'Data Vizualisation',
@@ -49,11 +49,11 @@ export default [
     },
     {
       text: 'Dash by plotly',
-      value: 35,
+      value: 20,
     },
     {
       text: 'Bokeh',
-      value: 30,
+      value: 15,
     },
     {
       text: 'Power BI',
@@ -61,7 +61,7 @@ export default [
     },
     {
       text: 'Mongo DB',
-      value: 38,
+      value: 40,
     },
     {
       text: 'Docker',
@@ -73,35 +73,35 @@ export default [
     },
     {
       text: 'SAP BO',
-      value: 30,
+      value: 15,
     },
     {
       text: 'Talend',
-      value: 30,
+      value: 20,
     },
     {
       text: 'Tensorflow',
-      value: 41,
-    },
-    {
-      text: 'Speech Recognition',
       value: 40,
     },
     {
+      text: 'Speech Recognition',
+      value: 20,
+    },
+    {
       text: 'Image processing',
-      value: 60,
+      value: 40,
     },
     {
       text: 'Image recognition',
-      value: 59,
+      value: 40,
     },
     {
       text: 'Data processing',
-      value: 80,
+      value: 90,
     },
     {
       text: 'OCR',
-      value: 50,
+      value: 40,
     },
     {
       text: 'Spotfire',
@@ -109,7 +109,7 @@ export default [
     },
     {
       text: 'Google Cloud',
-      value: 40,
+      value: 30,
     },
     {
       text: 'Pyspark',
@@ -117,7 +117,7 @@ export default [
     },
     {
       text: 'Scala',
-      value: 30,
+      value: 25,
     },
     {
       text: 'ScikitLearn',
@@ -125,7 +125,7 @@ export default [
     },
     {
       text: 'Big Query',
-      value: 90,
+      value: 100,
     },
     {
       text: 'MLlib',
@@ -141,7 +141,7 @@ export default [
     },
     {
       text: 'Heroku',
-      value: 50,
+      value: 30,
     }, 
     {
       text: 'AWS',
@@ -149,7 +149,7 @@ export default [
     },
     {
       text: 'OpenCV',
-      value: 40,
+      value: 35,
     },
     {
       text: 'SQL',
@@ -157,35 +157,35 @@ export default [
     },
     {
       text: 'HiveQl',
-      value: 80,
+      value: 50,
     },
     {
       text: 'PHP',
-      value: 30,
+      value: 15,
     },
     {
       text: 'ReactJS',
-      value: 40,
+      value: 20,
     },
     {
       text: 'Gitlab',
-      value: 20,
+      value: 15,
     }, 
     {
       text: 'GitHub',
-      value: 20,
+      value: 15,
     }, 
     {
       text: 'Windows',
-      value: 30,
+      value: 15,
     }, 
     {
       text: 'Linux',
-      value: 30,
+      value: 10,
     }, 
     {
       text: 'PL/SQL',
-      value: 40,
+      value: 30,
     },   
    
   ];
