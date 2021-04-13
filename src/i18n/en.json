@@ -28,7 +28,7 @@
      "date": "in September 2021",
      "motivation":"I designed this",
      "dash": "Dashboard", 
-     "motivation2":"to put together my work and my personnal projects in other to share them to whoever could be interested in",
+     "motivation2":"to put together my work and my personnal projects in other to share them to whoever could be interested.",
      "let":"Please let me know if you're interested by my profile.",
      "info":"Useful information",
      "becauseiam":"Because I am",
@@ -57,5 +57,6 @@
      "git-delete-description":"Write a tutorial about how to delete a Githun repository using python and the Github API.",
      "git-delete-title":"Git Delete Tutorial",
      "git-title":"Git Automation",
-     "projectHeader":"A list of my on going or done project in the context of my apprenticeship. My school is ESIGELEC and my company is group RENAULT. I always work on data science personal projects."
+     "projectHeader":"A list of my on going or done project in the context of my apprenticeship. My school is ESIGELEC and my company is group RENAULT. I always work on data science personal projects.",
+     "key-item":"Keywords"
 }

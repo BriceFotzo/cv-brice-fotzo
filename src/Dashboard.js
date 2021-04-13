@@ -378,7 +378,7 @@ export default function Dashboard(props) {
             />
           
         </Grid>
-        <Grid id="wordcloud" item xs={12} md={4} lg={12}>
+        <Grid id="keywords" item xs={12} md={4} lg={12}>
         
         <WordCloud/>
       

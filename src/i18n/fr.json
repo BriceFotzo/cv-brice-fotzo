@@ -59,5 +59,6 @@
      "git-delete-description":"Rédiger un tutoriel sur comment supprimer un repository Github en utilisant le langage python et l'API de Github",
      "git-delete-title":"Tutoriel Git Delete",
      "git-title":"Automatisations Git",
-     "projectHeader":"Une liste de mes projets en cours ou terminés dans le cadre de ma formation en alternance depuis Octobre 2018. Mon école est l'ESIGELEC et mon entreprise, le groupe RENAULT. Je travaille aussi sur des projets personnels en data science."
+     "projectHeader":"Une liste de mes projets en cours ou terminés dans le cadre de ma formation en alternance depuis Octobre 2018. Mon école est l'ESIGELEC et mon entreprise, le groupe RENAULT. Je travaille aussi sur des projets personnels en data science.",
+     "key-item":"Mots clés"
 }

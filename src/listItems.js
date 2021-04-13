@@ -14,7 +14,7 @@ import i18next from 'i18next';
 import SettingsApplicationsRoundedIcon from '@material-ui/icons/SettingsApplicationsRounded';
 import WorkRoundedIcon from '@material-ui/icons/WorkRounded';
 import ContactMailRoundedIcon from '@material-ui/icons/ContactMailRounded';
-
+import SpellcheckIcon from '@material-ui/icons/Spellcheck';
 
 
 export default function MainListItems() {
@@ -24,15 +24,21 @@ export default function MainListItems() {
     <div>
       <ListItem button>
         <ListItemIcon>
+          <WorkRoundedIcon />
+        </ListItemIcon>
+        <a href="#experience"><ListItemText primary={t("exp-item")}  /></a>
+      </ListItem>
+      <ListItem button>
+        <ListItemIcon>
           <SettingsApplicationsRoundedIcon />
         </ListItemIcon>
         <a href="#skills"><ListItemText primary={t("skill-item")} /></a>
       </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <WorkRoundedIcon />
+          <SpellcheckIcon />
         </ListItemIcon>
-        <a href="#experience"><ListItemText primary={t("exp-item")}  /></a>
+        <a href="#keywords"><ListItemText primary={t("key-item")} /></a>
       </ListItem>
       <ListItem button>
         <ListItemIcon>
