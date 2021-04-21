@@ -4,10 +4,6 @@ export default [
       value: 100,
     },
     {
-      text: 'Big Data',
-      value: 70,
-    },
-    {
       text: 'Hadoop',
       value: 50,
     },
@@ -22,10 +18,6 @@ export default [
     {
       text: 'Analytics',
       value: 80,
-    },
-    {
-      text: 'Prediction',
-      value: 40,
     },
     {
       text: 'Machine learning',
@@ -70,15 +62,8 @@ export default [
     {
       text: 'd3js',
       value: 40,
-    },
-    {
-      text: 'SAP BO',
-      value: 15,
-    },
-    {
-      text: 'Talend',
-      value: 20,
-    },
+    }
+    ,
     {
       text: 'Tensorflow',
       value: 40,
@@ -88,11 +73,7 @@ export default [
       value: 20,
     },
     {
-      text: 'Image processing',
-      value: 40,
-    },
-    {
-      text: 'Image recognition',
+      text: 'Image processing & Recognition',
       value: 40,
     },
     {
@@ -108,14 +89,6 @@ export default [
       value: 80,
     },
     {
-      text: 'Google Cloud',
-      value: 30,
-    },
-    {
-      text: 'Pyspark',
-      value: 50,
-    },
-    {
       text: 'Scala',
       value: 25,
     },
@@ -128,20 +101,8 @@ export default [
       value: 100,
     },
     {
-      text: 'MLlib',
-      value: 20,
-    },
-    {
       text: 'GCP',
       value: 70,
-    },
-    {
-      text: 'Google AI',
-      value: 20,
-    },
-    {
-      text: 'Heroku',
-      value: 30,
     }, 
     {
       text: 'AWS',
@@ -168,12 +129,8 @@ export default [
       value: 20,
     },
     {
-      text: 'Gitlab',
-      value: 15,
-    }, 
-    {
-      text: 'GitHub',
-      value: 15,
+      text: 'Git',
+      value: 20,
     }, 
     {
       text: 'Windows',
@@ -182,10 +139,6 @@ export default [
     {
       text: 'Linux',
       value: 10,
-    }, 
-    {
-      text: 'PL/SQL',
-      value: 30,
-    },   
+    }   
    
   ];

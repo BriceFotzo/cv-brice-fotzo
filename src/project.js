@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -51,9 +50,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function sortObjectByKeys(o) {
-  return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
-}
 const projectsList=[
     { id:8,
       date:"Oct. 2018 - Avr. 2020",

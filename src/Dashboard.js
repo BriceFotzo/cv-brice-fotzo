@@ -10,14 +10,12 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import MainListItems from './listItems';
 import Deposits from './Deposits';
 import Projets from './project';
@@ -35,7 +33,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
 import ContactItem from './contactItem'
-import VisibilityIcon from '@material-ui/icons/Visibility';
 import SearchIcon from '@material-ui/icons/Search';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import GroupIcon from '@material-ui/icons/Group';
@@ -294,10 +291,10 @@ export default function Dashboard(props) {
             <Grid item xs={12} sm={6}>
               <Paper className={classes.paper}>
                 <img class="pres-image" src="assets/img1.jpg" alt="test"></img>
-                <p><h1 class="pres-title">{t("bonjour")} {t("je")} {t("suis")} Brice FOTZO</h1>
+                <h1 class="pres-title">{t("bonjour")} {t("je")} {t("suis")} Brice FOTZO</h1>
                   <h2 class="pres-content">{t("intro")} <b>{t("bd")}</b> {t("date")}.</h2>
                   <h3 class="pres-content">{t("motivation")} {t("this")} <b>{t("dash")}</b> {t("motivation2")}  </h3>
-                </p>
+              
               </Paper>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -306,14 +303,14 @@ export default function Dashboard(props) {
                   <h2><b>{t('about')}</b></h2>
                   <Grid container item xs={12} spacing={3}>
                     <Grid item xs={12} lg={6}>
-                    <ContactItem  icon={<div class="dot"><SearchIcon/></div>} link={<div><h4>{t("becauseiam")} <b>{t("curious")}</b>,</h4><p>
+                    <ContactItem  icon={<div class="dot"><SearchIcon/></div>} link={<div><h4>{t("becauseiam")} <b>{t("curious")}</b>,</h4>
                       {t('curious-text')}
-                    </p></div>}/>
+                    </div>}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                    <ContactItem icon={<div class="dot"><AutorenewIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("ml")}</b>,</h4><p>
+                    <ContactItem icon={<div class="dot"><AutorenewIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("ml")}</b>,</h4>
                       {t('auto-text')}
-                    </p></div>} />
+                    </div>} />
                     </Grid>
                     
                   </Grid>
@@ -321,14 +318,14 @@ export default function Dashboard(props) {
                   <br></br>
                   <Grid container item xs={12} spacing={3}>
                   <Grid item xs={12} lg={6}>
-                    <ContactItem  icon={<div class="dot"><GroupIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("work in group")}</b>,</h4><p>
+                    <ContactItem  icon={<div class="dot"><GroupIcon/></div>} link={<div><h4>{t("becauseilike")} <b>{t("work in group")}</b>,</h4>
                       {t("group-text")}<a href="https://cs-sports.fr/toss/">TOSS</a> 2019.
-                    </p></div>}/>
+                    </div>}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                    <ContactItem  icon={<div class="dot"><AdjustSharpIcon/></div>} link={<div><h4>{t("becauseilike")} {t("theplu")} <b>challenges</b>,</h4><p>
+                    <ContactItem  icon={<div class="dot"><AdjustSharpIcon/></div>} link={<div><h4>{t("becauseilike")} {t("theplu")} <b>challenges</b>,</h4>
                       {t("participate in")} <a href="http://sites.esigelec.fr/Innojam/index.php">INNOJAM</a>, <a href="https://battledev.blogdumoderateur.com/">BattleDev 2019</a> {t("tennis")}
-                    </p></div>}/>
+                    </div>}/>
                     </Grid>
                   </Grid>
 
@@ -388,19 +385,19 @@ export default function Dashboard(props) {
           <Paper id="contact" className={classes.paper}>
             <h3><b>{t('info')}</b></h3>
           <Grid container item xs={12} spacing={3}>
-                    <Grid item xs={6}>
+                    <Grid item lg={6} xs={12}>
                     <ContactItem  icon={<LinkedInIcon/>} link={<h6><a href="https://www.linkedin.com/in/bricefotzo/">https://www.linkedin.com/in/bricefotzo/</a></h6>}/>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item lg={6} xs={12}>
                     <ContactItem icon={<GitHubIcon/>} link={<h6><a href="https://github.com/bricefotzo">https://github.com/bricefotzo</a></h6>} />
                     </Grid>
                     
                   </Grid>
                   <Grid container item xs={12} spacing={3}>
-                  <Grid item xs={6}>
+                  <Grid item lg={6} xs={12}>
                     <ContactItem  icon={<PhoneIcon/>} link={<h6>+33 06 60 88 46 39</h6>}/>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item lg={6} xs={12}>
                     <ContactItem  icon={<MailIcon/>} link={<h6><a href="mailto:brice.fotzo@hotmail.com">brice.fotzo@hotmail.com</a></h6>}/>
                     </Grid>
                   </Grid>

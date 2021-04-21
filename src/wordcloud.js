@@ -5,19 +5,10 @@ import "tippy.js/animations/scale.css";
 import words from "./words";
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -69,11 +60,11 @@ export default function WordCloud() {
         enableTooltip: true,
         deterministic: true,
         fontFamily: "impact",
-        fontSizes: [10, 100],
+        fontSizes: [5, 80],
         fontStyle: "normal",
         fontWeight: "normal",
         padding: 0,
-        rotations: 3,
+        rotations: 2,
         rotationAngles: [0],
         scale: "linear",
         spiral: "rectangular",
@@ -98,11 +89,11 @@ export default function WordCloud() {
           <Resizable
             defaultSize={{
               width: "auto",
-              height: 400,
+              height: 700,
             }}
             style={resizeStyle}
           >
-            <div style={{ width: "80%", height: "100%" }}>
+            <div style={{ width: "100%", height: "100%" }}>
               <ReactWordcloud options={options} words={words} />
             </div>
           </Resizable>
